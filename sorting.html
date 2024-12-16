@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting in JS</title>
+</head>
+<body>
+    <h1>
+        Sorting in JS
+    </h1>
+    <button onclick="ascending()">Ascending Order</button>
+    <button onclick="descending()">Descending Order</button>
+    <p id="p1"></p>
+    <script>
+        var points=[10,30,35,20,24,245,827,92];
+        function ascending(){
+            points.sort(function(a,b){
+             return a-b
+            });
+            document.getElementById("p1").innerHTML=points;
+        }
+        function descending() {
+                points.sort(function (a, b) {
+                    return b-a
+                });
+                document.getElementById("p1").innerHTML = points;
+            }
+    </script>
+</body>
+</html>
